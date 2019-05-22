@@ -13,10 +13,6 @@
 
 <style>
 
-
-
-
-
 #app {
   height: 100vh;
   background-color: #4A90E2;
