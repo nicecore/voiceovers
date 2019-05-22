@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <span>&larr; <router-link to="/" class="main-link">go back</router-link></span>
+    <span><router-link to="/" class="main-link">&larr; go back</router-link></span>
     <div class="mt-5">
       <b-tabs content-class="mt-3">
         <b-tab title="about" active><p>I’ve been singing, writing music, and using my voice for imitation and impressions for as long as I can remember…</p></b-tab>
