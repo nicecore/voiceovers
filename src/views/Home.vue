@@ -1,10 +1,31 @@
+<!-- 
+Home Component, displayed within router-view upon navigation to page.
+Header,
+Introductory info and link to "About" view,
+Audio Player (Component)
+ -->
+
 <template>
   <div class="home">
       
-      <h1 class="pt-3"><strong>Hi, I'm Adam.</strong></h1>
-      
-      <p id="main-paragraph" class="mt-5">I’m using my voice to create authentic, professional, and versatile performances for a wide range of projects in three languages. Enjoy some samples of my work below and <u><router-link to="/about" class="main-link">read more about me.</router-link></u> I’d love to work with you on your next project!</p>
+      <h1 class="pt-3 pl-3"><strong>Hi, I'm Adam.</strong></h1>
+      <!-- 
+      IDEA: Instead of underlining 'read more about me' by default, put a little icon or symbol next to it that will
+      encourage the user to mouse over it, but also highlight the whole phrase and make it all clickable.
 
+      IDEA: You need a second sentence in this blurb referencing the type of stuff you've done/can do. You still 
+      need to work on this part a lot! This falls under content! Need to understand what kind of stuff you might 
+      be best at marketing yourself with.
+       -->
+      <p id="main-paragraph" class="pl-3 mt-4">
+        I’m making authentic, professional, versatile voice performances for a wide range of projects in three languages. Please enjoy some samples of my work below and take a minute to <router-link to="/about" class="main-link">read more about me <font-awesome-icon icon="arrow-alt-circle-right" id="arrow-icon"/> </router-link>
+        
+        
+      </p>
+      
+      <p class="pl-3 d-inline">e-mail here?</p>
+      <p class="pl-3 pt-4">== Audio player goes here ==</p>
+      
   </div>
 </template>
 
@@ -21,35 +42,23 @@ export default {
 
 <style>
 
-h1 {
-  display: inline-block;
-}
-
-p {
-
-}
 
 
 
-h1, p {
-  color: white;
-  font-family: Montserrat;
-  line-height: 30px;
-}
 
 #main-paragraph {
   width: 97%;
-  font-size: .9rem;
-  /* margin: 0 auto; */
 }
 
-/* #about-link {
-  text-decoration: underline;
-  color: white;
+#invitation {
+  font-size: 1.3rem;
+}
 
-} */
-
-
-
+#arrow-icon {
+  font-size: 1.2rem;
+  margin-left: 1px;
+  position: relative;
+  top: 3px;
+}
 </style>
 

@@ -1,3 +1,7 @@
+<!-- 
+Audio Player component, embedded in Home component under router-view.
+ -->
+
 <template>
 
 </template>
