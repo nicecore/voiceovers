@@ -11,6 +11,7 @@ Audio Player (Component)
     <div class="container pt-2">
       <!-- TODO: Link to Persian and Portuguese Versions of Page -->
       <p class="text-right"><a href="#" class="lang-links farsi-link">فارسی</a> | <a href="#" class="lang-links pt-link">português</a></p>
+      <h1 class="pl-3 pt-3"><strong>Hi, I'm Adam.</strong></h1>
       <router-view/>
       <!-- TODO: Audio Player goes here -->
     </div>
@@ -22,8 +23,6 @@ Audio Player (Component)
 
 
 <style>
-
-
 /* Top level styles for text and... */
 #app {
   height: 100vh;
@@ -33,7 +32,7 @@ Audio Player (Component)
 h1, h3, h4, h5, p, li {
   color: white;
   font-family: Montserrat;
-  font-size: .9rem;
+  font-size: 1rem;
   line-height: 30px;
 }
 
@@ -41,11 +40,20 @@ h1 {
   display: inline-block;
 }
 
+.container {
+  /* width: 90% !important; */
+  /* margin-left: 1rem !important; */
+}
+
+.tab-pane {
+  max-width: 90%;
+}
+
 
 /* Styles for links to foreign language versions. */
 .lang-links {
   color: inherit;
-  font-size: .8rem;
+  font-size: .9rem;
   cursor: pointer;
 }
 .farsi-link {
@@ -76,6 +84,15 @@ h1 {
 .main-link:hover {
   color: #e2844a;
   text-decoration: none;
+}
+
+/* Media Queries */
+
+@media (min-width: 970px) {
+  .container {
+    max-width: 720px !important;
+    margin-left: auto !important;
+  }
 }
 
 

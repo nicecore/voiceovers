@@ -6,9 +6,8 @@ Audio Player (Component)
  -->
 
 <template>
-  <div class="home">
+  <div class="home pl-3">
       
-      <h1 class="pt-3 pl-3"><strong>Hi, I'm Adam.</strong></h1>
       <!-- 
       IDEA: Instead of underlining 'read more about me' by default, put a little icon or symbol next to it that will
       encourage the user to mouse over it, but also highlight the whole phrase and make it all clickable.
@@ -17,14 +16,14 @@ Audio Player (Component)
       need to work on this part a lot! This falls under content! Need to understand what kind of stuff you might 
       be best at marketing yourself with.
        -->
-      <p id="main-paragraph" class="pl-3 mt-4">
-        I’m making authentic, professional, versatile voice performances for a wide range of projects in three languages. Please enjoy some samples of my work below and take a minute to <router-link to="/about" class="main-link">read more about me <font-awesome-icon icon="arrow-alt-circle-right" id="arrow-icon"/> </router-link>
+      <p id="main-paragraph" class="mt-4">
+        I’m making authentic, professional, versatile voice performances in three languages. Please enjoy some samples of my work below and take a minute to <router-link to="/about" class="main-link">read more about me <font-awesome-icon icon="arrow-alt-circle-right" id="arrow-icon"/> </router-link>
         
         
       </p>
       
-      <p class="pl-3 d-inline">e-mail here?</p>
-      <p class="pl-3 pt-4">== Audio player goes here ==</p>
+      <p class="d-inline">e-mail here?</p>
+      <p class="pt-4">== Audio player goes here ==</p>
       
   </div>
 </template>
