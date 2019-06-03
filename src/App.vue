@@ -13,12 +13,22 @@ Audio Player (Component)
       <p class="text-right"><a href="#" class="lang-links farsi-link">فارسی</a> | <a href="#" class="lang-links pt-link">português</a></p>
       <h1 class="pl-3 pt-3"><strong>Hi, I'm Adam.</strong></h1>
       <router-view/>
-      <!-- TODO: Audio Player goes here -->
+      <audio-player></audio-player>
+
     </div>
   </div>
 </template>
 
 <script>
+import AudioPlayer from "./components/AudioPlayer.vue";
+
+export default {
+  components: {
+    AudioPlayer
+  }
+}
+
+
 </script>
 
 

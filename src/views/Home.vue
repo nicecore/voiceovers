@@ -6,7 +6,7 @@ Audio Player (Component)
  -->
 
 <template>
-  <div class="home pl-3">
+  <div id="home-div" class="home pl-3">
       
       <!-- 
       IDEA: Instead of underlining 'read more about me' by default, put a little icon or symbol next to it that will
@@ -22,8 +22,7 @@ Audio Player (Component)
         
       </p>
       
-      <p class="d-inline">e-mail here?</p>
-      <p class="pt-4">== Audio player goes here ==</p>
+
       
   </div>
 </template>
@@ -40,6 +39,10 @@ export default {
 </script>
 
 <style>
+
+#home-div {
+  height: 400px;
+}
 
 
 

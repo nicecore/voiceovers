@@ -5,7 +5,7 @@ Tabbed interface with three sections (about, equipment, services)
  -->
 
 <template>
-  <div class="about pl-3">
+  <div id="about-div" class="about pl-3">
     <p class="mt-4"><router-link to="/" class="main-link"><font-awesome-icon icon="arrow-alt-circle-left" id="arrow-icon"/> go back</router-link></p>
     <div class="mt-4">
       <b-tabs content-class="mt-3">
@@ -77,6 +77,10 @@ export default {
 </script>
 
 <style>
+
+#about-div {
+  height: 400px;
+}
 
 #first-tab___BV_tab_button__ {
   margin-left: 0;
