@@ -79,7 +79,7 @@ export default {
 <style>
 
 #about-div {
-  height: 400px;
+  height: 440px;
 }
 
 #first-tab___BV_tab_button__ {

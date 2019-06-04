@@ -41,7 +41,7 @@ export default {
 <style>
 
 #home-div {
-  height: 400px;
+  height: 440px;
 }
 
 

@@ -1,5 +1,10 @@
 // export initAudioPlayer()
 
+var playlists = {
+    english: [null],
+    persian: [null],
+    portuguese: [null]
+}
 
 // #region Filetype designation
 // Still not sure if this will be necessary. 
@@ -42,7 +47,7 @@ function initAudioPlayer() {
 
     // Bypass extension stuff for testing 6/3
     // track.src = "./audio/" + playlist[0] + ".mp3";
-    track.src = "https://www.dropbox.com/s/z324y8ax4ju7fc3/AT1.mp3"
+    track.src = "birds.mp3"
 
     track.loop = false;
     // Set innerHTML - may need to be changed
@@ -60,6 +65,7 @@ function initAudioPlayer() {
     track.addEventListener("timeupdate", seekTimeUpdate);
     track.addEventListener("ended", function() { nextTrack() });
     myPlaylist.addEventListener("change", changeTrack);
+    muteBtn.addEventListener("click", mute)
 
     // #endregion
 
@@ -68,13 +74,13 @@ function initAudioPlayer() {
     function playPause() {
         if (track.paused) {
             console.log(track)
-            var playPromise = track.play();
-            if (playPromise !== undefined) {
-                playPromise.then(_ => {
+            var playTrack = track.play();
+            if (playTrack !== undefined) {
+                playTrack.then(_ => {
                     alert("Music should be playing")
                 })
                 .catch(error => {
-                    alert("There was an error.")
+                    console.log("Error: " + error)
                     
                 })
             }

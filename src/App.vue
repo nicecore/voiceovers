@@ -20,7 +20,7 @@ Audio Player (Component)
 </template>
 
 <script>
-import AudioPlayer from "./components/AudioPlayer.vue";
+import AudioPlayer from "./components/AudioPlayer2.vue";
 
 export default {
   components: {
@@ -35,7 +35,7 @@ export default {
 <style>
 /* Top level styles for text and... */
 #app {
-  height: 100vh;
+  min-height: 100vh;
   background-color: #4A90E2;
 }
 
