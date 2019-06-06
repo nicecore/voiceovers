@@ -93,7 +93,6 @@ export default {
   transition: color 300ms;
 }
 
-
 .nav-tabs {
   /* TODO: Change later when parent container is adjusted for responsiveness */
   width: 80%;
@@ -107,7 +106,6 @@ a.nav-link.active {
 span {
   color: white;
 }
-
 
 .about-list {
   color: white;
@@ -140,11 +138,6 @@ span {
   top: -1px;
   fill: black;
 }
-
-
-
-
-
 
 </style>
 

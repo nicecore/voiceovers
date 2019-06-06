@@ -1,15 +1,15 @@
 <template>
 <div>
     <button id="playPauseBtn" v-on:click="playPause">Play</button>
-    <input 
+    <!-- <input
+    @input="seekTime()"
     v-model="seek"
     ref="seekBar"
     class="ml-4"
     type="range"
     min="0"
     max="100"
-    value="0"
-    step="1">
+    step="1"> -->
     <div id="timebox">
         <!-- Time goes here -->
     </div>
@@ -24,15 +24,44 @@
     value="100"
     step="1"
     id="volumeBar">
-    <h2 id="playlistStatus"></h2>
-    <select name="" size="3" id="myPlaylist">
-        <option value="AT1">AT1</option>
-        <option value="AT2">AT2</option>
-        <option value="AT3">AT3</option>
-    </select>
+    <div class="mt-5">
+        <ul class="about-list">
+            <li>
+                <p class="d-inline lang-label eng-label"><strong>eng</strong></p>
+                <p class="d-inline ml-2 playlist-item">Adam reads a poem</p>
+            </li>
+            <li>
+                <p class="d-inline lang-label eng-label"><strong>eng</strong></p>
+                <p class="d-inline ml-2 playlist-item">Adam does a funny voice</p>
+            </li>
+            <li>
+                <p class="d-inline lang-label eng-label"><strong>eng</strong></p>
+                <p class="d-inline ml-2 playlist-item">Adam reads another poem</p>
+            </li>
+            <li>
+                <p class="d-inline lang-label per-label"><strong>per</strong></p>
+                <p class="d-inline ml-2 playlist-item">Adam reads a poem</p>
+            </li>
+            <li>
+                <p class="d-inline lang-label per-label"><strong>per</strong></p>
+                <p class="d-inline ml-2 playlist-item">Adam reads another poem</p>
+            </li>
+            <li>
+                <p class="d-inline lang-label por-label"><strong>por</strong></p>
+                <p class="d-inline ml-2 playlist-item">Adam reads a radio commercial</p>
+            </li>
+            <li>
+                <p class="d-inline lang-label por-label"><strong>por</strong></p>
+                <p class="d-inline ml-2 playlist-item">Adam reads a poem in Portuguese</p>
+            </li>
+        </ul>
+    </div>
+
+
 </div>
 
 </template>
+
 
 <script>
 export default {
@@ -50,7 +79,7 @@ export default {
             activePlaylist: undefined,
             activeTrack: undefined,
             volume: 100,
-            seek: 0,
+            // seek: 0,
         }
     },
     mounted() {
@@ -60,15 +89,23 @@ export default {
         this.activeTrack = track;
     },
     methods: {
-        updateTime: function() {
-            // Shorten down the activeTrack.currentTime
-            var cTime = this.activeTrack.currentTime
-            // Get the new value for the seekbar by multiplying the current time by
-            // 100 divided by the duration
-            var newTime = cTime * (100 / this.activeTrack.duration)
-            // Update the seekbar
-            this.$refs.seekBar.value = newTime
-        },
+        // seekTime: function(event) {
+        //     // Get the value of where user clicked
+        //     var skipTime = event.target.value
+        //     // Multiply the duration by where the user clicked divided by 100
+        //     var newTime = skipTime * (100 / this.activeTrack.duration)
+        //     // Set this.activeTrack.currentTime to newTime
+        //     this.activeTrack.currentTime = newTime
+        // },
+        // updateTime: function() {
+        //     // Shorten down the activeTrack.currentTime
+        //     var cTime = this.activeTrack.currentTime
+        //     // Get the new value for the seekbar by multiplying the current time by
+        //     // 100 divided by the duration
+        //     var newPosition = cTime * (100 / this.activeTrack.duration)
+        //     // Update the seekbar
+        //     this.seek = newPosition
+        // },
         playPause: function(value) {
             // If user triggers playPause from the playlists
             if (value) {
@@ -107,3 +144,39 @@ export default {
 }
 </script>
 
+<style>
+
+.playlist-item {
+    transition: color 300ms;
+}
+
+.playlist-item:hover {
+    cursor: pointer;
+    color: orange;
+}
+
+.lang-label {
+    position: relative;
+    top: -1px;
+    font-size: .8rem;
+    padding: .3rem;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.eng-label {
+    color: #e2844a;
+}
+
+.per-label {
+    padding: .37rem;
+    color: #E24A61;
+}
+
+.por-label {
+    padding: .37rem;
+    color: #22E530;
+}
+
+
+</style>
