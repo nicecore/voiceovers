@@ -89,23 +89,23 @@ export default {
         this.activeTrack = track;
     },
     methods: {
-        // seekTime: function(event) {
-        //     // Get the value of where user clicked
-        //     var skipTime = event.target.value
-        //     // Multiply the duration by where the user clicked divided by 100
-        //     var newTime = skipTime * (100 / this.activeTrack.duration)
-        //     // Set this.activeTrack.currentTime to newTime
-        //     this.activeTrack.currentTime = newTime
-        // },
-        // updateTime: function() {
-        //     // Shorten down the activeTrack.currentTime
-        //     var cTime = this.activeTrack.currentTime
-        //     // Get the new value for the seekbar by multiplying the current time by
-        //     // 100 divided by the duration
-        //     var newPosition = cTime * (100 / this.activeTrack.duration)
-        //     // Update the seekbar
-        //     this.seek = newPosition
-        // },
+        seekTime: function(event) {
+            // Get the value of where user clicked
+            var skipTime = event.target.value
+            // Multiply the duration by where the user clicked divided by 100
+            var newTime = skipTime * (100 / this.activeTrack.duration)
+            // Set this.activeTrack.currentTime to newTime
+            this.activeTrack.currentTime = newTime
+        },
+        updateTime: function() {
+            // Shorten down the activeTrack.currentTime
+            var cTime = this.activeTrack.currentTime
+            // Get the new value for the seekbar by multiplying the current time by
+            // 100 divided by the duration
+            var newPosition = cTime * (100 / this.activeTrack.duration)
+            // Update the seekbar
+            this.seek = newPosition
+        },
         playPause: function(value) {
             // If user triggers playPause from the playlists
             if (value) {
